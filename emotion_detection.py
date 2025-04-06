@@ -10,7 +10,7 @@ def emotion_detector(text_to_analyze):
     response = requests.post(URL, json = input_json, headers=header)
  
     if response.status_code == 200:
-        return response
+        return response.text
     else:
         return response
 
